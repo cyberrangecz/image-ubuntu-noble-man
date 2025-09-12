@@ -14,7 +14,7 @@ variable "short_sha" {
 
 source "openstack" "xubuntu" {
   flavor              = "a1-2-20"
-  image_name          = "xubuntu-noble-${var.short_sha}"
+  image_name          = "ubuntu-noble-man-${var.short_sha}"
   insecure            = "true"
   source_image_name   = "ubuntu-noble-x86_64"
   ssh_username        = "ubuntu"
@@ -29,9 +29,7 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/desktop.sh",
-      "scripts/vnc.sh",
-      "scripts/vnccopypaste.sh",
+      "scripts/install-man.sh",
       "scripts/cleanup.sh"
     ]
   }

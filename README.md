@@ -1,6 +1,6 @@
-# Xubuntu noble image
+# ubuntu noble man preinstalled image
 
-This repo contains Packer files for building Xubuntu from Ubuntu noble base image for QEMU/OpenStack using GitHub Actions.
+This repo contains Packer files for building ubuntu noble man preinstalled image from Ubuntu noble base image for QEMU/OpenStack using GitHub Actions.
 
 ## Image for QEMU/OpenStack
 
