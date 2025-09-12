@@ -1,4 +1,4 @@
-NAME       = "xubuntu-noble"
+NAME       = "ubuntu-noble-man"
 TYPE       = "linux"
 DISTRO     = "ubuntu"
-GUI_ACCESS = "true"
+GUI_ACCESS = "false"

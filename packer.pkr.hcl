@@ -12,7 +12,7 @@ variable "short_sha" {
   default = env("TF_VAR_REV")
 }
 
-source "openstack" "xubuntu" {
+source "openstack" "ubuntu" {
   flavor              = "a1-2-20"
   image_name          = "ubuntu-noble-man-${var.short_sha}"
   insecure            = "true"
@@ -25,7 +25,7 @@ source "openstack" "xubuntu" {
 }
 
 build {
-  sources = ["source.openstack.xubuntu"]
+  sources = ["source.openstack.ubuntu"]
 
   provisioner "shell" {
     scripts = [
@@ -36,7 +36,7 @@ build {
 
   post-processor "shell-local" {
     command = join(" ", [
-      "openstack image set xubuntu-noble-${var.short_sha} --insecure",
+      "openstack image set ubuntu-noble-man-${var.short_sha} --insecure",
       "--property hw_scsi_model=virtio-scsi",
       "--property hw_disk_bus=scsi",
       "--property hw_rng_model=virtio",
