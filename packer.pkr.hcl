@@ -45,7 +45,7 @@ build {
       "--property os_type=linux",
       "--property os_distro=ubuntu",
       "--property owner_specified.openstack.version=${var.short_sha}",
-      "--property owner_specified.openstack.gui_access=true",
+      "--property owner_specified.openstack.gui_access=false",
       "--property owner_specified.openstack.custom=true"
     ])
   }
