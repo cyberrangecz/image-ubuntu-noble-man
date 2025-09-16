@@ -12,5 +12,11 @@ sudo apt install -y iptables-persistent
 # install syslog-ng
 sudo apt install -y syslog-ng
 
+# install python3-yaml
+sudo apt install -y python3-yaml
+
+# install helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
 # fetch guacd image
 sudo ctr images pull docker.io/guacamole/guacd:1.6.0
